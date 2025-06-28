@@ -33,21 +33,24 @@ A modern, responsive portfolio website built with cutting-edge web technologies 
 **Hosting Services:**
 - ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase)
 
-<p>├── public/              # Static assets <p>
-<p>│   ├── favicon.ico      # Favicon<p>
-<p>│   └── index.html       # Main HTML file<p>
-<p>├── src/
-<p>│   ├── assets/          # Images, fonts, etc.<p>
-<p>│   ├── components/      # Reusable UI components<p>
-<p>│   ├── pages/           # Page components<p>
-<p>│   ├── styles/          # Global styles<p>
-<p>│   ├── utils/           # Utility functions<p>
-<p>│   ├── App.jsx          # Main application component<p>
-<p>│   └── main.jsx         # Application entry point<p>
-<p>├── .eslintrc.cjs        # ESLint configuration<p>
-<p>├── tailwind.config.js   # Tailwind CSS configuration<p>
-<p>├── vite.config.js       # Vite configuration<p>
-<p>└── package.json         # Project dependencies<p>
+
+**Project Structure:**
+
+├── public/              # Static assets<br>
+│   ├── favicon.ico      # Favicon<br>
+│   └── index.html       # Main HTML file<br>
+├── src/<br>
+│   ├── assets/          # Images, fonts, etc.<br>
+│   ├── components/      # Reusable UI components<br>
+│   ├── pages/           # Page components<br>
+│   ├── styles/          # Global styles<br>
+│   ├── utils/           # Utility functions<br>
+│   ├── App.jsx          # Main application component<br>
+│   └── main.jsx         # Application entry point<br>
+├── .eslintrc.cjs        # ESLint configuration<br>
+├── tailwind.config.js   # Tailwind CSS configuration<br>
+├── vite.config.js       # Vite configuration<br>
+└── package.json         # Project dependencies<br>
 
 ## 🚀 Getting Started
 
