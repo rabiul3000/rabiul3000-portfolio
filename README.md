@@ -33,21 +33,21 @@ A modern, responsive portfolio website built with cutting-edge web technologies 
 **Hosting Services:**
 - ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase)
 
-├── public/              # Static assets
-│   ├── favicon.ico      # Favicon
-│   └── index.html       # Main HTML file
-├── src/
-│   ├── assets/          # Images, fonts, etc.
-│   ├── components/      # Reusable UI components
-│   ├── pages/           # Page components
-│   ├── styles/          # Global styles
-│   ├── utils/           # Utility functions
-│   ├── App.jsx          # Main application component
-│   └── main.jsx         # Application entry point
-├── .eslintrc.cjs        # ESLint configuration
-├── tailwind.config.js   # Tailwind CSS configuration
-├── vite.config.js       # Vite configuration
-└── package.json         # Project dependencies
+<p>├── public/              # Static assets <p>
+<p>│   ├── favicon.ico      # Favicon<p>
+<p>│   └── index.html       # Main HTML file<p>
+<p>├── src/
+<p>│   ├── assets/          # Images, fonts, etc.<p>
+<p>│   ├── components/      # Reusable UI components<p>
+<p>│   ├── pages/           # Page components<p>
+<p>│   ├── styles/          # Global styles<p>
+<p>│   ├── utils/           # Utility functions<p>
+<p>│   ├── App.jsx          # Main application component<p>
+<p>│   └── main.jsx         # Application entry point<p>
+<p>├── .eslintrc.cjs        # ESLint configuration<p>
+<p>├── tailwind.config.js   # Tailwind CSS configuration<p>
+<p>├── vite.config.js       # Vite configuration<p>
+<p>└── package.json         # Project dependencies<p>
 
 ## 🚀 Getting Started
 
