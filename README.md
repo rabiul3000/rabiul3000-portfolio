@@ -12,6 +12,7 @@ A modern, responsive portfolio website built with cutting-edge web technologies 
 ## ✨ Features
 
 - ⚡ **Blazing Fast** - Built with Vite for optimal performance
+- � **Modern Routing** - React Router v7 for seamless navigation
 - 🎨 **Beautiful UI** - Styled with Tailwind CSS and DaisyUI
 - � **Modern Stack** - React 19 + React Router 7
 - 🌈 **Animations** - Powered by Motion for smooth interactions
@@ -22,6 +23,7 @@ A modern, responsive portfolio website built with cutting-edge web technologies 
 
 **Frontend:**
 - ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)
+- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router)
 - ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css)
 - ![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?style=flat)
 - ![Motion](https://img.shields.io/badge/Motion-121212?style=flat)
