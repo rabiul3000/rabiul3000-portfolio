@@ -4,6 +4,9 @@ import About from "./pages/About/About";
 import Service from "./pages/Service/Service";
 import Contact from "./pages/Contact/Contact";
 import RootLayout from "./pages/Layouts/RootLayout";
+import Projects from "./pages/Projects/Projects";
+import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
+import Skills from "./pages/Skills/Skills";
 
 const router = createBrowserRouter([
   {
@@ -15,13 +18,22 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
+        path: "/projects",
+        Component: Projects,
+      },
+      {
+        path: "/detail/:id",
+        Component: ProjectDetail,
+      },
+      {
+        path: "/skills",
+        Component: Skills,
+      },
+      {
         path: "/about",
         Component: About,
       },
-      {
-        path: "/service",
-        Component: Service,
-      },
+
       {
         path: "/contact",
         Component: Contact,

@@ -1,0 +1,63 @@
+[
+    {
+      "id": "proj1",
+      "name": "Plantium",
+      "img": "https://i.ibb.co/ZHk9XwF/plantium.png",
+      "title": "Smart Plant Care Dashboard",
+      "techs": ["React", "TailwindCSS", "DaisyUI", "Firebase", "Chart.js"],
+      "desc": "A dashboard to monitor and manage smart plant pots with real-time data visualization.",
+      "liveLink": "https://plantium.vercel.app",
+      "repoLink": "https://github.com/yourname/plantium",
+      "challenge": "Dealing with real-time sensor data updates and maintaining performance.",
+      "futurePlans": "Integrate voice assistant and plant disease prediction via AI."
+    },
+    {
+      "id": "proj2",
+      "name": "Portfolio V3",
+      "img": "https://i.ibb.co/Cb8ShQg/portfolio-v3.png",
+      "title": "Personal Portfolio Site",
+      "techs": ["Next.js", "TailwindCSS", "Framer Motion", "DaisyUI"],
+      "desc": "An interactive and animated portfolio showcasing skills and projects.",
+      "liveLink": "https://yourname.dev",
+      "repoLink": "https://github.com/yourname/portfolio-v3",
+      "challenge": "Coordinating motion animations and scroll events efficiently.",
+      "futurePlans": "Add blog section and CMS with contentful."
+    },
+    {
+      "id": "proj3",
+      "name": "TaskSync",
+      "img": "https://i.ibb.co/6J0HShf/tasksync.png",
+      "title": "Team Task Manager",
+      "techs": ["React", "TailwindCSS", "Node.js", "Express", "MongoDB"],
+      "desc": "A collaborative task manager for teams with real-time updates.",
+      "liveLink": "https://tasksync.web.app",
+      "repoLink": "https://github.com/yourname/tasksync",
+      "challenge": "Managing socket-based real-time updates and role-based access.",
+      "futurePlans": "Add calendar integration and mobile app version."
+    },
+    {
+      "id": "proj4",
+      "name": "ShopFair",
+      "img": "https://i.ibb.co/QnbS3Mk/shopfair.png",
+      "title": "E-commerce UI Demo",
+      "techs": ["HTML", "CSS", "JavaScript", "DaisyUI", "Swiper.js"],
+      "desc": "A modern e-commerce frontend template built with responsive design.",
+      "liveLink": "https://shopfair.vercel.app",
+      "repoLink": "https://github.com/yourname/shopfair",
+      "challenge": "Building modular components that scale for future backend integration.",
+      "futurePlans": "Connect to backend and implement payment systems."
+    },
+    {
+      "id": "proj5",
+      "name": "WeatherSnap",
+      "img": "https://i.ibb.co/nRZkFHw/weathersnap.png",
+      "title": "Weather App",
+      "techs": ["React", "TailwindCSS", "OpenWeather API"],
+      "desc": "A sleek weather application that shows current conditions and forecasts by city.",
+      "liveLink": "https://weathersnap.vercel.app",
+      "repoLink": "https://github.com/yourname/weathersnap",
+      "challenge": "Handling API errors and creating reusable weather cards.",
+      "futurePlans": "Add geolocation and hourly forecast."
+    }
+  ]
+  
