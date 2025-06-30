@@ -9,7 +9,6 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const formRef = useRef();
@@ -64,9 +63,7 @@ const Contact = () => {
       transition={{ duration: 0.7 }}
       className='w-full max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-12'
     >
-      <Helmet>
-          <title>Rabiul | Contact</title>
-        </Helmet>
+ 
       {/* Left Section */}
       <div className='flex-1 space-y-6'>
         <h2 className='text-4xl font-bold leading-snug'>

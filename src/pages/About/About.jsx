@@ -1,13 +1,9 @@
 import { motion } from "motion/react";
 import Container from "../../Components/Container/Container";
-import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <Container>
-      <Helmet>
-        <title>Rabiul | About Me</title>
-      </Helmet>
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
