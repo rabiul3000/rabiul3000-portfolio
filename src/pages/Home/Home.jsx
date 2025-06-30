@@ -1,12 +1,12 @@
 import React from "react";
 import About from "../About/About";
-import Service from "../Service/Service";
 import Contact from "../Contact/Contact";
 import Container from "../../Components/Container/Container";
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import Footer from "../../Components/Footer/Footer";
 import Skills from "../Skills/Skills";
+import Projects from "../Projects/Projects";
 
 const Home = () => {
   const containerVariants = {
@@ -33,7 +33,7 @@ const Home = () => {
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-          className='flex flex-col lg:flex-row justify-center items-center w-full gap-4'
+          className='flex flex-col-reverse lg:flex-row justify-center items-center w-full gap-4'
         >
           <motion.div
             variants={itemVariants}
@@ -47,6 +47,9 @@ const Home = () => {
             <p className=''>Frontend | Backend or Both </p>
             <Link to='/contact' className='btn uppercase btn-wide btn-primary '>
               Get In Touch
+            </Link>
+            <Link to='/projects' className='btn uppercase btn-wide btn-secondary '>
+              Explore Projects
             </Link>
           </motion.div>
 
@@ -73,9 +76,10 @@ const Home = () => {
         </motion.div>
       </Container>
       <About />
+      <Projects />
       <Skills />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className='max-w-4xl mx-auto px-4 py-16'
+        className='max-w-4xl mx-auto lg:px-4 py-32'
       >
         <div className='card shadow-lg bg-base-200 p-6 lg:p-10 rounded-2xl'>
           <motion.h2

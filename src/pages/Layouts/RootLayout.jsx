@@ -6,7 +6,7 @@ import { Outlet, useLocation } from "react-router";
 
 const RootLayout = () => {
   const { pathname } = useLocation();
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(true);
 
   useEffect(() => {
     setShowOverlay(true);

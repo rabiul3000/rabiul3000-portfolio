@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../Components/Container/Container";
 import { Link } from "react-router";
-
+import {motion} from 'motion/react'
 const Projects = () => {
   const detail = {
     id: "wilfyd8wqy",
@@ -18,39 +18,64 @@ const Projects = () => {
 
   return (
     <Container>
-      <div>
-        <div className='flex items-center flex-col gap-4 justify-center h-70'>
-          <p className='text-mod font-bold'>LATEST</p>
-          <h1 className='text-6xl font-title'>My Projects</h1>
-        </div>
+     <div className="px-4 sm:px-6 lg:px-12">
+  <motion.div
+    className='flex flex-col items-center gap-2 py-10 text-center'
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <p className='text-sm sm:text-base font-semibold text-primary'>LATEST</p>
+    <h1 className='text-3xl sm:text-5xl lg:text-6xl font-title font-bold text-base-content'>
+      My Projects
+    </h1>
+  </motion.div>
 
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pb-24'>
-          {[1, 2, 3, 4, 5].map((index) => (
-            <div className='card bg-base-200 w-96  shadow-lg' key={index}>
-              <figure className='relative p-4'>
-                <img
-                  className='rounded-lg h-84 hover:scale-105 duration-200'
-                  src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'
-                  alt='Shoes'
-                />
-                <Link
-                  to={`/detail/${detail.id}`}
-                  state={detail}
-                  className='rounded-lg cursor-pointer absolute opacity-0 scale-50 hover:scale-95 hover:opacity-75 duration-500 bg-primary-content z-100 top-0 bottom-0 left-0 right-0 flex justify-center items-center'
-                >
-                  <p>Click for Detail</p>
-                </Link>
-              </figure>
-              <div className='card-body'>
-                <p className='text-mod font-bold'>PLANTIUM</p>
-                <h1 className='card-title text-gray-700'>
-                  A Plant Management Application
-                </h1>
-              </div>
-            </div>
-          ))}
+  <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 pb-24'>
+    {[1, 2, 3, 4, 5].map((_, index) => (
+      <motion.div
+        key={index}
+        className='card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300'
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        <figure className='relative p-4 overflow-hidden'>
+          <motion.img
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className='rounded-lg h-60 sm:h-72 w-full object-cover'
+            src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'
+            alt='Project Thumbnail'
+          />
+          <motion.div
+            whileHover={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.4 }}
+            className='absolute inset-0 flex items-center justify-center bg-base-100 bg-opacity-70 text-base-content rounded-lg opacity-0'
+          >
+            <Link
+              to={`/detail/${index}`}
+              state={{ id: index }}
+              className='font-semibold text-lg'
+            >
+              Click for Detail
+            </Link>
+          </motion.div>
+        </figure>
+
+        <div className='card-body'>
+          <p className='text-sm font-bold text-primary'>PLANTIUM</p>
+          <h2 className='card-title text-base-content'>
+            A Plant Management Application
+          </h2>
         </div>
-      </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
     </Container>
   );
 };
