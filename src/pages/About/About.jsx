@@ -1,9 +1,13 @@
 import { motion } from "motion/react";
 import Container from "../../Components/Container/Container";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <Container>
+      <Helmet>
+        <title>Rabiul | About Me</title>
+      </Helmet>
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,9 +44,10 @@ const About = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className='mb-4 leading-relaxed text-lg'
           >
-            <span className='text-5xl'>I</span> love crafting intuitive and dynamic user experiences. Whether it's
-            building scalable APIs or designing responsive UIs, I enjoy solving
-            real problems with clean, maintainable code.
+            <span className='text-5xl'>I</span> love crafting intuitive and
+            dynamic user experiences. Whether it's building scalable APIs or
+            designing responsive UIs, I enjoy solving real problems with clean,
+            maintainable code.
           </motion.p>
 
           <motion.p
@@ -51,9 +56,10 @@ const About = () => {
             transition={{ delay: 0.8, duration: 2 }}
             className='mb-4 leading-relaxed text-lg'
           >
-            <span className='text-5xl'>O</span>utside of coding, I recharge by playing football, sketching random
-            things, and occasionally getting lost in tech documentaries or
-            strategy games. Balance keeps my creativity fresh.
+            <span className='text-5xl'>O</span>utside of coding, I recharge by
+            playing football, sketching random things, and occasionally getting
+            lost in tech documentaries or strategy games. Balance keeps my
+            creativity fresh.
           </motion.p>
 
           <motion.p
@@ -62,9 +68,10 @@ const About = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className='leading-relaxed text-lg'
           >
-            <span className='text-5xl'>I</span> take pride in being curious, detail-oriented, and always up for a
-            challenge. Whether I'm shipping a solo project or collaborating with
-            a team, I bring enthusiasm and purpose to every line of code.
+            <span className='text-5xl'>I</span> take pride in being curious,
+            detail-oriented, and always up for a challenge. Whether I'm shipping
+            a solo project or collaborating with a team, I bring enthusiasm and
+            purpose to every line of code.
           </motion.p>
         </div>
       </motion.section>

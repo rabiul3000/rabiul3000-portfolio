@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../../Components/Container/Container";
 import { Link } from "react-router";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet";
 
 const Projects = () => {
   const projects = [
@@ -82,6 +83,9 @@ const Projects = () => {
 
   return (
     <Container>
+        <Helmet>
+          <title>Rabiul | Projects</title>
+        </Helmet>
       <div className='px-4 sm:px-6 lg:px-12'>
         <motion.div
           className='flex flex-col items-center gap-2 py-10 text-center'

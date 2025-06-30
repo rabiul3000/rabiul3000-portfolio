@@ -9,6 +9,7 @@ import {
   SiDaisyui,
 } from "react-icons/si";
 import Container from "../../Components/Container/Container";
+import { Helmet } from "react-helmet";
 
 const skills = {
   frontend: [
@@ -42,6 +43,9 @@ const SkillCard = ({ name, icon }) => (
 const Skills = () => {
   return (
     <Container>
+      <Helmet>
+          <title>Rabiul | Skills</title>
+        </Helmet>
       <div className='py-20'>
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
