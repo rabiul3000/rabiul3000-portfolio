@@ -1,17 +1,60 @@
-import { motion } from "motion/react";
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
-  FaEnvelope,
   FaFacebookF,
-  FaInstagram,
-  FaSkype,
-  FaPinterestP,
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
 
 const Contact = () => {
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_d2f5ehb", // service ID
+        "template_9otggtj", // template ID
+        formRef.current,
+        "yLRheHBY1k2WDe5T4" // public key
+      )
+      .then(
+        () => {
+          setLoading(false);
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Thanks for reaching out. I'll get back to you shortly!",
+            timer: 3000,
+            toast: true,
+            position: "center",
+            showConfirmButton: false,
+          });
+          formRef.current.reset();
+        },
+        (error) => {
+          setLoading(false);
+          Swal.fire({
+            icon: "error",
+            title: "Oops!",
+            text: "Something went wrong. Please try again.",
+            timer: 3000,
+            toast: true,
+            position: "center",
+            showConfirmButton: false,
+          });
+          console.error(error.text);
+        }
+      );
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -47,6 +90,7 @@ const Contact = () => {
             <p>Dhaka, Bangladesh</p>
           </div>
         </div>
+
         <h1>My Socials:</h1>
 
         <div className='flex items-center text-mod gap-4'>
@@ -76,32 +120,41 @@ const Contact = () => {
 
       {/* Right Section - Contact Form */}
       <div className='flex-1'>
-        <form className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          className='grid grid-cols-1 sm:grid-cols-2 gap-4'
+        >
           <input
             type='text'
+            name='user_name'
             placeholder='Your Name *'
             className='input input-bordered col-span-1 w-full'
             required
           />
           <input
             type='email'
+            name='user_email'
             placeholder='Email Address *'
             className='input input-bordered col-span-1 w-full'
             required
           />
           <input
             type='tel'
+            name='user_phone'
             placeholder='Phone Number *'
             className='input input-bordered col-span-1 w-full'
             required
           />
           <input
             type='text'
+            name='subject'
             placeholder='Subject *'
             className='input input-bordered col-span-1 w-full'
             required
           />
           <textarea
+            name='message'
             className='textarea textarea-bordered w-full col-span-1 sm:col-span-2 h-32'
             placeholder='Write here...'
             required
@@ -111,9 +164,14 @@ const Contact = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             type='submit'
+            disabled={loading}
             className='btn bg-blue-600 text-white hover:bg-blue-700 col-span-1 sm:col-span-2 uppercase tracking-wider'
           >
-            Send a Message
+            {loading ? (
+              <span className='loading loading-spinner loading-sm'></span>
+            ) : (
+              "Send a Message"
+            )}
           </motion.button>
         </form>
       </div>
