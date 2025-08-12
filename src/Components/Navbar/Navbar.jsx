@@ -14,7 +14,7 @@ const listVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: 20, },
+  hidden: { opacity: 0, x: 20 },
   visible: { opacity: 1, x: 0 },
 };
 
@@ -47,7 +47,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="lg:py-14 py-4 pb-20 lg:w-8/12 w-11/12 mx-auto flex justify-between items-center font-bold text-slate-500">
+    <div className="lg:py-6 p-4 w-full gap-8 flex lg:justify-around justify-between items-center font-bold bg-blue-50 fixed z-10">
       <div className="text-3xl">
         <span className="text-[#1877f2]">R</span>
         <span className="text-neutral">abiul</span>

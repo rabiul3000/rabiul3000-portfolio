@@ -65,8 +65,8 @@ const Contact = () => {
     >
  
       {/* Left Section */}
-      <div className='flex-1 space-y-6'>
-        <h2 className='text-4xl font-bold leading-snug'>
+      <div className='flex-1 space-y-6 '>
+        <h2 className='text-4xl  text-center lg:text-left font-bold leading-snug'>
           Feel free to get in touch with <br />{" "}
           <span className='text-mod'>Me</span>
         </h2>
@@ -120,7 +120,7 @@ const Contact = () => {
       </div>
 
       {/* Right Section - Contact Form */}
-      <div className='flex-1'>
+      <div className='flex-1 bg-blue-50 shadow-2xl p-4 rounded-xl'>
         <form
           ref={formRef}
           onSubmit={sendEmail}
