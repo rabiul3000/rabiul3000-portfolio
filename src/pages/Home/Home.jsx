@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 
+
 import {
   SiTailwindcss,
   SiFirebase,
@@ -117,7 +118,7 @@ const Home = () => {
 
             <motion.div
               variants={itemVariants}
-              className="lg:w-[400px] lg:h-[600px] flex-1/2 rounded-full"
+                className="flex-1/2 rounded-full aspect-square max-w-[400px] mx-auto"
             >
               <div className="lg:block hidden relative rounded-lg">
                 <p className="text-lg font-medium">Hi there!</p>

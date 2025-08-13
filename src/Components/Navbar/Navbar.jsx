@@ -1,16 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "motion/react";
+import myCV from "../../assets/cv.pdf";
 
-// Stagger & fade animation for sidebar links
 const listVariants = {
   hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
+  visible: { transition: { staggerChildren: 0.5 } },
 };
 
 const itemVariants = {
@@ -43,6 +40,16 @@ const Navbar = () => {
           {item.label}
         </NavLink>
       ))}
+
+      {/* Resume button for desktop */}
+      <a
+        href={myCV}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hidden lg:inline-block border p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200"
+      >
+        RESUME
+      </a>
     </>
   );
 
@@ -55,11 +62,12 @@ const Navbar = () => {
 
       <div className="flex gap-8 items-end">
         {/* Desktop nav */}
-        <div className="lg:flex gap-8 items-end hidden">{links}</div>
+        <div className="lg:flex gap-8 items-center hidden">{links}</div>
 
         {/* Mobile drawer */}
         <div className="drawer drawer-end">
           <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+
           <div className="drawer-content">
             <label htmlFor="my-drawer-4" className="drawer-button lg:hidden">
               <BsThreeDotsVertical className="cursor-pointer text-mod text-4xl font-bold" />
@@ -73,29 +81,56 @@ const Navbar = () => {
               className="drawer-overlay"
             ></label>
 
-            {/* Animate sidebar content */}
-            <motion.ul
-              className="menu bg-base-200 text-base-content text-lg min-h-full w-80 px-4 py-20 flex flex-col gap-4"
-              initial="hidden"
-              animate="visible"
-              variants={listVariants}
-            >
-              {navItems.map((item) => (
+            {/* Sidebar Content */}
+            <div className="bg-base-200 text-base-content text-lg min-h-full w-80 px-4 py-6 flex flex-col gap-4 relative">
+              {/* Close Button */}
+              <button
+                onClick={handleClose}
+                className="absolute top-4 right-4 text-2xl p-1 rounded-full hover:bg-gray-300 transition"
+              >
+                <AiOutlineClose />
+              </button>
+
+              {/* Animate nav items */}
+              <motion.ul
+                className="menu flex flex-col gap-4 mt-10"
+                initial="hidden"
+                animate="visible"
+                variants={listVariants}
+              >
+                {navItems.map((item) => (
+                  <motion.li
+                    key={item.to}
+                    variants={itemVariants}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <NavLink
+                      to={item.to}
+                      onClick={handleClose}
+                      className="hover:text-primary transition-colors duration-200"
+                    >
+                      {item.label}
+                    </NavLink>
+                  </motion.li>
+                ))}
+
+                {/* Resume button for mobile */}
                 <motion.li
-                  key={item.to}
                   variants={itemVariants}
                   transition={{ duration: 0.4 }}
                 >
-                  <NavLink
-                    to={item.to}
+                  <a
+                    href={myCV}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={handleClose}
-                    className="hover:text-primary transition-colors duration-200"
+                    className="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors duration-200 block text-center"
                   >
-                    {item.label}
-                  </NavLink>
+                    RESUME
+                  </a>
                 </motion.li>
-              ))}
-            </motion.ul>
+              </motion.ul>
+            </div>
           </div>
         </div>
       </div>
