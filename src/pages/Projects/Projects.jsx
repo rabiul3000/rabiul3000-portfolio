@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       id: "pr-3",
-      name: "🏢 HomeHorizon",
+      name: "HomeHorizon",
       img: "https://i.ibb.co.com/zHnLy2CQ/Screenshot-83.png",
       title: "Full Production-Ready Payment Integrated Building Management System",
       techs: [
@@ -31,11 +31,11 @@ const Projects = () => {
         "Integrating Stripe payments with proper error handling and webhooks.",
       ],
       plans: [
-        "📱 Launch a dedicated mobile app version.",
-        "🌍 Add multilingual support for broader accessibility.",
-        "📊 Advanced analytics dashboard for admins.",
-        "🔔 Push notifications for rent reminders and announcements.",
-        "🛠 Continuous scalability improvements.",
+        "Launch a dedicated mobile app version.",
+        "Add multilingual support for broader accessibility.",
+        "Advanced analytics dashboard for admins.",
+        "Push notifications for rent reminders and announcements.",
+        "Continuous scalability improvements.",
       ],
     },
     {
